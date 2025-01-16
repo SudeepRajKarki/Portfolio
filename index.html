@@ -144,7 +144,7 @@
 
   <section id="contact" class="container">
     <h2 class="text-center mb-4">Contact Me</h2>
-    <form action="https://formspree.io/f/mkggeakq" method="POST">
+    <form id="contactForm">
       <div class="mb-3">
         <label for="name" class="form-label">Name</label>
         <input type="text" class="form-control" id="name" name="name" required>
@@ -174,7 +174,10 @@
   <!-- Include Font Awesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script type="text/javascript">
-    document.getElementById("contact").addEventListener("submit", function(event) {
+    // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS service and template IDs
+    emailjs.init('w4k9JQVtIDm0FTDX4');  // Replace 'YOUR_USER_ID' with your EmailJS user ID
+
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
       event.preventDefault();
   
       emailjs.sendForm("Sudeep", "Stranger", this)

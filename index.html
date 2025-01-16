@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudeep Raj Karki</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="#">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(45deg, #007bff, #6c757d);
+      color: white;
+      padding: 100px 0; /* Increased padding for bigger header */
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3.5rem; /* Increased font size for the title */
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    header .btn {
+      font-size: 1.2rem;
+    }
+
+    header img {
+      border-radius: 50%;
+      width: 150px; /* Set a fixed width for the image */
+      height: 150px; /* Set a fixed height for the image */
+      object-fit: cover;
+      margin-bottom: 20px; /* Space between the image and text */
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    #about p {
+      font-size: 1.2rem;
+    }
+
+    .portfolio-item .card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .portfolio-item .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #contact form .form-control {
+      border-radius: 0;
+      border: 1px solid #ced4da;
+    }
+
+    footer {
+      background: #f8f9fa;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Sudeep Raj Karki</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header>
+    <!-- Add your photo here -->
+    <img src="cover.jpeg" alt="Sudeep Raj Karki"> <!-- Replace 'your-photo.jpg' with your actual image path -->
+    <h1>Sudeep Raj Karki</h1>
+    <p>Web Developer | Freelancer</p>
+    <a href="CV.pdf" download class="btn btn-light">Download CV</a>
+  </header>
+
+  <section id="about" class="container">
+    <h2 class="text-center mb-4">About Me</h2>
+    <p style="text-align: justify;">I am a passionate web developer with expertise in creating responsive and user-friendly websites. I specialize in modern web technologies and design principles. My journey in web development has equipped me with a solid foundation in front-end and back-end development, enabling me to deliver seamless and efficient digital experiences. I am committed to continuous learning and staying updated with the latest industry trends to ensure high-quality outcomes for my clients and projects.</p>
+  </section>
+
+  <section id="portfolio" class="container">
+    <h2 class="text-center mb-4">Portfolio</h2>
+    <div class="row g-4">
+      <div class="col-md-4 portfolio-item">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Birth Registration</h5>
+            <p class="card-text">This is a website that registers births.</p>
+            <a href="https://github.com/Strangerme03" target="_blank" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 portfolio-item">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">To-do List</h5>
+            <p class="card-text">A web app where we can add different tasks.</p>
+            <a href="https://github.com/Strangerme03" target="_blank" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 portfolio-item">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Sbs optics</h5>
+            <p class="card-text">A shop for lens and frames.</p>
+            <a href="https://github.com/Strangerme03" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2 class="text-center mb-4">Contact Me</h2>
+    <form action="https://formspree.io/f/mkggeakq" method="POST">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sudeep Raj Karki. All Rights Reserved.</p>
+    <a href="https://twitter.com/Stranger_me03" class="text-dark me-3" target="_blank">Twitter</a>
+    <a href="https://www.facebook.com/karki.sudip.16/" class="text-dark me-3" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/stranger_me_03/" class="text-dark me-3" target="_blank">Instagram</a>
+    <a href="https://github.com/Strangerme03" class="text-dark me-3" target="_blank">Github</a>
+
+    <a href="https://www.linkedin.com/in/sudeep-raj-karki-15ab77238/" class="text-dark me-3" target="_blank">LinkedIn</a>
+  </footer>
+
+  <!-- Include Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

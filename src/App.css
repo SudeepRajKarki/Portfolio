@@ -11,10 +11,6 @@ a {
   color: inherit;
 }
 
-/* Navbar styles */
-
-
-
 .section {
   padding: 3rem 2rem;
   text-align: center;
@@ -111,8 +107,6 @@ a {
   background-color: #2563eb;
 }
 
-
-
 html, body {
   height: 100%;
   margin: 0;
@@ -182,7 +176,6 @@ html, body {
   cursor: pointer;
 }
 
-/* Desktop view */
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -197,7 +190,6 @@ html, body {
   text-decoration: underline;
 }
 
-/* Mobile view */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;

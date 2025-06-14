@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <h1 className="logo">My Portfolio</h1>
+        <h1 className="logo"><a href="/">Sudeep Raj Karki</a></h1>
         <button
           className="menu-toggle"
           onClick={() => setIsOpen(!isOpen)}

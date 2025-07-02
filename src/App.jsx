@@ -1,11 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Navbar from './Navbar'
-import Home from './Home';
-import About from './About'
-import Projects from './Projects'
-import Contact from './Contact'
-import Footer from './Footer'
-import './App.css'
+import Navbar from './components/Navbar'
+import Home from './components/Home';
+
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -15,9 +12,6 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer/>

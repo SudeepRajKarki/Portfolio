@@ -26,8 +26,16 @@ function Home() {
   />
   <h2 className="text-5xl font-bold mb-4">Hi, I'm Sudeep Raj Karki 👋</h2>
   <p className="text-xl text-gray-700">
-    Web Developer | Designer | Tech Enthusiast
+    Web Developer | Designer | Tech Enthusiast<br/>
+    <a
+    href="/sudeepcv.pdf"  // Place your CV file in the `public` folder
+    download
+    className="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 mt-5"
+  >
+    Download CV
+  </a>
   </p>
+  
 </section>
 
       <section id="about" className="max-w-5xl mx-auto px-6 py-20">

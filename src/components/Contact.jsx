@@ -34,8 +34,7 @@ function Contact() {
       <h2 className="text-4xl font-bold text-center mb-10 text-gray-900">Contact Me</h2>
       
       <div className="flex flex-col md:flex-row gap-10">
-        {/* Contact Info */}
-        <div className="md:w-1/2 bg-gray-50 p-8 rounded-lg shadow-md">
+        <div className="md:w-1/2 bg-gray-100 p-8 rounded-lg shadow-md">
           <h3 className="text-2xl font-semibold mb-4">Get in Touch</h3>
           <p className="mb-2"><strong>Email:</strong> <a href="mailto:sudeepkarkee3@gmail.com" className="text-blue-600 hover:underline">sudeepkarkee3@gmail.com</a></p>
           <p className="mb-2"><strong>Phone:</strong> <a href="tel:+9779862083800" className="text-blue-600 hover:underline">+977-9862083800</a></p>
@@ -45,7 +44,7 @@ function Contact() {
 
         {/* Contact Form */}
         <form
-          className="md:w-1/2 bg-white p-8 rounded-lg shadow-md flex flex-col"
+          className="md:w-1/2  bg-gray-100 p-8 rounded-lg shadow-md flex flex-col"
           onSubmit={handleSubmit}
         >
           {submitted && (

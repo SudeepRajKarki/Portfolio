@@ -9,7 +9,7 @@ import {
 
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-6 mt-12">
+    <footer className="bg-gray-900 text-gray-300 py-6 mt-12" >
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
         <p className="mb-4 md:mb-0 text-sm">&copy; 2025 Sudeep Raj Karki. All Rights Reserved.</p>
 

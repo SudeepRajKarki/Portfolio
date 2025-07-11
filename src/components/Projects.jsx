@@ -18,19 +18,6 @@ function Projects() {
         </div>
 
         <div className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between hover:shadow-xl transition-shadow">
-          <h3 className="text-2xl font-semibold mb-3 text-blue-600">SBS Optics Store</h3>
-          <p className="text-gray-700 mb-6">An optical e-commerce site with product filters, cart, and admin panel made as a group project.</p>
-          <a
-            href="https://github.com/swostik720/ecommerce_project.git"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-auto text-blue-500 hover:underline font-medium"
-          >
-            View Code
-          </a>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between hover:shadow-xl transition-shadow">
           <h3 className="text-2xl font-semibold mb-3 text-blue-600">A digital Clock</h3>
           <p className="text-gray-700 mb-6">A simple digital clock made with React.</p>
           <a

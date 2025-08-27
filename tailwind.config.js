@@ -4,13 +4,13 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class', // ✅ Enable class-based dark mode
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        forest: '#228B22', // ✅ If you wanted a "forest" color
+      },
+    },
   },
-  plugins:[],
-  theme:[
-    {
-      origin:("forest")
-    }
-  ]
+  plugins: [],
 }

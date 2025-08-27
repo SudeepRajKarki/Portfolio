@@ -42,7 +42,7 @@ function Footer() {
             <FontAwesomeIcon icon={faInstagram} />
           </a>
           <a
-            href="https://github.com/Strangerme03"
+            href="https://github.com/SudeepRajKarki"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-400 transition-colors duration-300"

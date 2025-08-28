@@ -4,22 +4,20 @@ import { FaBars, FaTimes } from 'react-icons/fa'; // Better icons
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [theme, setTheme] = useState('dark'); // ✅ Default to dark
+  const [theme, setTheme] = useState('dark');
   const location = useLocation();
   const navigate = useNavigate();
 
   // Set default dark mode and apply on load
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-    } else {
-      setTheme('dark'); // ✅ Force dark mode by default
-    }
+    const finalTheme = savedTheme || 'dark';
+    setTheme(finalTheme);
 
-    // Apply to html element
-    if (savedTheme === 'dark' || !savedTheme) {
+    if (finalTheme === 'dark') {
       document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
     }
   }, []);
 
@@ -38,22 +36,35 @@ const Navbar = () => {
   };
 
   const scrollToSection = (id) => {
-    setIsOpen(false); // Close mobile menu
+    setIsOpen(false);
     if (location.pathname === '/') {
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100); // Small delay to ensure render
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     } else {
       navigate(`/#${id}`);
     }
   };
 
+  const scrollToTop = () => {
+    setIsOpen(false);
+    if (location.pathname === '/') {
+      // Already on home, just scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Navigate to home; we can let the App or useEffect handle scrolling
+      navigate('/');
+      // Optional: use a timeout in App.js to scroll after render
+    }
+  };
+
   const navLinks = [
-    { label: 'Home', to: '/' },
+    { label: 'Home', action: 'home' },
     { label: 'About', id: 'about' },
+    { label: 'Education', id: 'education' },
     { label: 'Skills', id: 'skills' },
     { label: 'Projects', id: 'projects' },
     { label: 'Certificates', id: 'certificates' },
@@ -65,26 +76,26 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 py-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
 
-          {/* Logo */}
-          <Link
-            to="/"
-            onClick={() => setIsOpen(false)}
+          {/* Logo - Click always goes to top */}
+          <button
+            onClick={scrollToTop}
             className="text-xl font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition"
+            aria-label="Go to home"
           >
             Sudeep Raj Karki
-          </Link>
+          </button>
 
           {/* Desktop Menu & Theme Toggle */}
           <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) =>
-              link.to ? (
-                <Link
+              link.action === 'home' ? (
+                <button
                   key={link.label}
-                  to={link.to}
+                  onClick={scrollToTop}
                   className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition"
                 >
                   {link.label}
-                </Link>
+                </button>
               ) : (
                 <button
                   key={link.label}
@@ -133,15 +144,14 @@ const Navbar = () => {
         >
           <div className="flex flex-col px-4 py-3 space-y-3">
             {navLinks.map((link) =>
-              link.to ? (
-                <Link
+              link.action === 'home' ? (
+                <button
                   key={link.label}
-                  to={link.to}
-                  onClick={() => setIsOpen(false)}
-                  className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium py-2 transition"
+                  onClick={scrollToTop}
+                  className="text-left text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium py-2 transition"
                 >
                   {link.label}
-                </Link>
+                </button>
               ) : (
                 <button
                   key={link.label}

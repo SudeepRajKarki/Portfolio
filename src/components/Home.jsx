@@ -5,12 +5,12 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Skills from "./Skills";
 import Certificates from "./Certificates";
+import Education from "./Education";
 
 function Home() {
   const location = useLocation();
 
   useEffect(() => {
-    // Only scroll if there's a hash in the URL
     if (location.hash) {
       const element = document.querySelector(location.hash);
       if (element) {
@@ -51,7 +51,10 @@ function Home() {
       <section id="about" className="max-w-5xl mx-auto px-6 py-20">
         <About />
       </section>
-
+       {/* Education */}
+      <section id="education" className="max-w-5xl mx-auto px-6 py-20">
+        <Education />
+      </section>
       {/* Skills */}
       <section id="skills" className="max-w-5xl mx-auto px-6 py-20">
         <Skills />

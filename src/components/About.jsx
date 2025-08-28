@@ -89,16 +89,6 @@ function About() {
           </li>
         </ul>
       </div>
-
-      {/* Call to Action */}
-      <div className="text-center mt-8">
-        <a
-          href="#projects"
-          className="inline-block bg-blue-600 dark:bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-300 font-semibold text-base"
-        >
-          View My Projects
-        </a>
-      </div>
     </section>
   );
 }
